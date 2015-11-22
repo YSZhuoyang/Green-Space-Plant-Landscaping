@@ -1,0 +1,95 @@
+Axiom ==> B(0.6, 0.7, 5, 0, 0, 1, 0)B(0.5, 0.6, 4, 0, 1, 0, 0);
+
+Iterate: 5
+
+B(rs, rx, length, leaf, order, stop, age) ==>
+	if (order > 0 && order < 3 && stop == 0)
+	{
+		B(rs, rx, length, leaf, order, 1, age + 1)
+		
+		if (PROBABILITY(0.7))
+		{
+			[RL(Random(30, 50))B(rs * 0.6, rs, length * 0.2, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.6, length * 0.1, 0, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(length * 0.2, length * 0.7), 0, order + 1, 0, age + 1)]
+			
+			[RH(130)RL(Random(30, 50))B(rs * 0.6, rs, length * 0.2, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.6, length * 0.1, 0, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(length * 0.2, length * 0.7), 0, order + 1, 0, age + 1)]
+			
+			[RH(250)RL(Random(30, 50))B(rs * 0.6, rs, length * 0.2, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.6, length * 0.1, 0, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(length * 0.2, length * 0.7), 0, order + 1, 0, age + 1)]
+		}
+		else
+		{
+			[RH(130)RL(Random(30, 50))B(rs * 0.6, rs, length * 0.2, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.6, length * 0.1, 0, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(length * 0.2, length * 0.7), 0, order + 1, 0, age + 1)]
+			
+			[RH(300)RL(Random(30, 50))B(rs * 0.6, rs, length * 0.2, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.6, length * 0.1, 0, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(length * 0.2, length * 0.7), 0, order + 1, 0, age + 1)]
+		}
+	}
+	else if (order < 4 && stop == 0)
+	{
+		B(rs, rx, length, leaf, order, 1, age + 1)
+		
+		if (PROBABILITY(0.5))
+		{
+			[RL(Random(30, 40))B(rs * 0.5, rs, 0.5, 0, order + 1, 1, age + 1)RL(-15)B(rs * 0.45, rs * 0.5, 0.5, 1, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(1, 1.5), 1, order + 1, 0, age + 1)]
+			
+			[RH(180)RL(Random(30, 50))B(rs * 0.5, rs, 0.5, 0, order + 1, 1, age + 1)RL(-15)B(rs * 0.45, rs * 0.5, 0.5, 1, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(1, 1.5), 1, order + 1, 0, age + 1)]
+		}
+		else
+		{
+			[RL(Random(30, 45))B(rs * 0.5, rs, 0.5, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.5, 0.5, 1, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(1, 1.5), 1, order + 1, 0, age + 1)]
+			
+			[RH(120)RL(Random(30, 50))B(rs * 0.5, rs, 0.5, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.5, 0.5, 1, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(1, 1.5), 1, order + 1, 0, age + 1)]
+			
+			[RH(260)RL(Random(30, 50))B(rs * 0.5, rs, 0.5, 0, order + 1, 1, age + 1)RL(-20)B(rs * 0.45, rs * 0.5, 0.5, 1, order + 1, 1, age + 1)
+			B(rs * 0.4, rs * 0.45, Random(1, 1.5), 1, order + 1, 0, age + 1)]
+		}
+	}
+	else if (order < 6 && stop == 0)
+	{
+		B(rs, rx, length, leaf, order, 1, age + 1)
+		
+		if (PROBABILITY(0.5))
+		{
+			[RL(Random(10, 40))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 0, age + 1)]
+			
+			[RH(180)RL(Random(10, 40))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)B(rs * 0.4, rs * 0.4, Random(0.8, 1), 1, order + 1, 1, age + 1)]
+		}
+		else if (PROBABILITY(0.3))
+		{
+			[RL(Random(10, 20))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 0, age + 1)]
+			
+			[RH(120)RL(Random(10, 40))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)B(rs * 0.4, rs * 0.4, Random(0.8, 1), 1, order + 1, 1, age + 1)]
+			
+			[RH(240)RL(Random(10, 30))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)B(rs * 0.4, rs * 0.4, Random(0.8, 1), 1, order + 1, 0, age + 1)]
+		}
+	}
+	else if (order < 8 && stop == 0)
+	{
+		B(rs, rx, length, leaf, order, 1, age + 1)
+		
+		if (PROBABILITY(0.7))
+		{
+			[RL(Random(10, 40))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)]
+			
+			[RH(180)RL(Random(10, 40))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)]
+		}
+		else if (PROBABILITY(0.3))
+		{
+			[RL(Random(10, 20))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)]
+			
+			[RH(120)RL(Random(10, 40))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)B(rs * 0.4, rs * 0.4, Random(0.8, 1), 1, order + 1, 0, age + 1)]
+			
+			[RH(240)RL(Random(10, 30))B(rs * 0.4, rs, Random(0.8, 1), 1, order + 1, 1, age + 1)B(rs * 0.4, rs * 0.4, Random(0.8, 1), 1, order + 1, 0, age + 1)]
+		}
+	}
+	else
+	{
+		B(rs, rx, length, leaf, order, 1, age + 1)
+	}

@@ -1,0 +1,91 @@
+/*not supported
+@CHARSET "UTF-8";*/
+
+.root
+{
+	-fx-spacing: 30px;
+	-fx-background-color: #c2b176;
+}
+
+.combo-box
+{
+	-fx-font: italic 10pt "Arial";
+}
+
+.label
+{
+	/*-fx-alignment: right;*/
+}
+
+/*#button0
+{
+	-fx-background-image: url("images/gui/t1.png");
+}*/
+
+#stackPane
+{
+	-fx-content-display: top;
+	-fx-border-color: #625e46;
+	-fx-border-width: 1.5;
+	-fx-border-insets: 20, 5, 5, 5;
+}
+
+#grid
+{
+	-fx-translate-y: 5;
+	-fx-padding: 15, 5, 5, 5;
+	-fx-alignment: center;
+	-fx-hgap: 15px;
+	-fx-vgap: 15px;
+}
+
+#subtitle
+{
+	-fx-translate-y: -16;
+	-fx-background-color: #c2b176;
+	
+	-fx-font: bold italic 18pt "Arial";
+	/*-fx-border-color: red;*/
+    /*-fx-effect: dropshadow( one-pass-box, black, 8, 0.0, 2, 0 );*/
+	-fx-text-fill: #18b41d;
+}
+
+#shrub_specification
+{
+	-fx-font: bold normal 13pt "Arial";
+	-fx-text-fill: #424242;
+}
+
+#density
+{
+	-fx-pref-height: 25;
+	-fx-pref-width: 65;
+}
+
+#color
+{
+	-fx-pref-height: 25;
+	-fx-pref-width: 90;
+}
+
+#width
+{
+	-fx-pref-height: 25;
+	-fx-pref-width: 65;
+}
+
+#text
+{
+	-fx-font: normal 13pt "Arial";
+	-fx-text-fill: #353535;
+}
+
+
+/*
+	grid: -fx-position-shape: true; //used to center shape like circles and etc.
+	label: -fx-content-display: center;
+	-fx-text-alignment: center;
+	-fx-font-size: 20;
+	-fx-font-family: Arial;
+	-fx-font-style: italic;
+*/
