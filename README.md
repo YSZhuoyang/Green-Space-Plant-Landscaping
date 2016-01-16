@@ -3,4 +3,6 @@ This is the final undergraduate project, which is a plant landscaping tool, by w
 
 Plant models are built in the system, and they are modelled with a rule based method: L-System.
 
+Techniques used: phone shading, shadow map, soft shadows (persantage closer filtering), particle system (compute shaders), instance drawing, rule based plant modelling (L-System), MSAA.
+
 [Live demo on youtube](https://www.youtube.com/watch?v=7JP8YgwPKTw)
