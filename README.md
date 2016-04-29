@@ -16,7 +16,7 @@ A design aid tool for plant landscaping, by which users are able to design their
     
     ./src/StandardObjects     // Basic 3D model objects
     
-    ./src/StandardObjects     // Data structures, particle systems, camera & light resources
+    ./src/Support             // Data structures, particle systems, camera & light resources
     
     ./data/                   // L-System model description files
     
