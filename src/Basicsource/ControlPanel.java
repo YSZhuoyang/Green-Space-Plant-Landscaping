@@ -106,7 +106,7 @@ public class ControlPanel extends Application
 		setImportModelTab();
 		
 		scene = new Scene(tabPane, CONTROLPANEL_WIDTH, CONTROLPANEL_HEIGHT);
-		scene.getStylesheets().add("basicsource/style.css");
+		scene.getStylesheets().add("Basicsource/style.css");
 		
 		//launch user interface
 		Platform.runLater(() -> 
