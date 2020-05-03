@@ -30,7 +30,3 @@ A design aid tool for plant landscaping, by which users are able to design their
 * Install eclipse, download JOGL library
 * Create a JOGL project as library dependency [following instructions here](https://jogamp.org/wiki/index.php/Setting_up_a_JogAmp_project_in_your_favorite_IDE)
 * Import and open Green Space project, setup project dependency
-
-## Author
-  Sangzhuoyang Yu
-
